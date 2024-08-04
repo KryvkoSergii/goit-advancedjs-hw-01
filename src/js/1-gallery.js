@@ -83,7 +83,4 @@ const update = images.map(el => getElement(el)).join("");
 const gallery = document.querySelector("ul.gallery");
 gallery.insertAdjacentHTML("afterbegin", update);
 
-
-var lightbox = new SimpleLightbox({
-    elements: document.querySelectorAll('.gallery-link')
-});
+new SimpleLightbox('ul.gallery a', {captionsData: 'alt', captionDelay: 250 });
