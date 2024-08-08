@@ -15,6 +15,7 @@ if (saved) {
 const form = document.querySelector(".feedback-form");
 
 form.addEventListener("submit", (event) => {
+    event.preventDefault()
     if (formData.email.length == 0 || formData.message.length == 0) {
         alert("Fill please all fields");
     } else {
